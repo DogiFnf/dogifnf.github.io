@@ -1,5 +1,5 @@
 document.getElementById('aboutButton').addEventListener('click', function() {
-    window.location.href = 'about.html';
+    window.location.href = 'index.html';
 });
 
 document.getElementById('contactsButton').addEventListener('click', function() {
