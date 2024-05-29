@@ -1,8 +1,17 @@
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --card-background-color: #fff;
+    --card-text-color: #000;
+    --cyber-link-color: #333;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
@@ -57,7 +66,8 @@ button:hover {
 }
 
 .project-card {
-    background-color: #eeeeee;
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
@@ -99,7 +109,7 @@ button:hover {
 }
 
 main ul li a {
-    color: #333;
+    color: var(--cyber-link-color);
     text-decoration: none;
 }
 
@@ -111,4 +121,17 @@ main ul li a:hover {
 main ul ul {
     list-style-type: disc;
     padding-left: 20px;
+}
+
+.dark-theme {
+    --background-color: #333;
+    --text-color: #fff;
+    --card-background-color: #444;
+    --card-text-color: #ddd;
+    --cyber-link-color: #ddd;
+}
+
+.dark-theme body {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }

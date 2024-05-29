@@ -6,6 +6,23 @@ document.getElementById('contactsButton').addEventListener('click', function() {
     window.location.href = 'contacts.html';
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleButton = document.getElementById('themeToggle');
+    if (!themeToggleButton) return;
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        document.documentElement.classList.add(savedTheme); // Применяем сохраненную тему
+    }
+
+    themeToggleButton.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark-theme');
+    
+        const currentTheme = document.documentElement.classList.contains('dark-theme')? 'dark-theme' : '';
+        localStorage.setItem('theme', currentTheme);
+    });
+});
 
 document.getElementById('copyButton').addEventListener('click', function() {
     var textToCopy = this.getAttribute('data-text');
