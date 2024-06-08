@@ -4,6 +4,7 @@
     --card-background-color: #fff;
     --card-text-color: #000;
     --cyber-link-color: #333;
+    --button-text-color: #fff
 }
 
 body {
@@ -15,6 +16,9 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
     background-color: #333;
     color: white;
     padding: 10px 0;
@@ -23,9 +27,9 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 main {
@@ -47,7 +51,7 @@ footer {
 button {
     background-color: #222;
     border-radius: 10px;
-    color: white;
+    color: var(--button-text-color);
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -65,22 +69,46 @@ button:hover {
     box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
 }
 
+.projects {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 320px;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+}
+
 .project-card {
     background-color: var(--card-background-color);
     color: var(--card-text-color);
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: solid 1px #ccc;
+    border-radius: 50px;
+    min-width: 200px;
+    max-width: 200px;
+    gap: 20px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 15px;
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
     transition: 0.3s;
 }
 
 .project-card {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    box-sizing: border-box;
+    flex-basis: calc(33.333% - 30px);
+    margin-bottom: 30px;
 }
 
 .project-card:hover {
@@ -134,4 +162,134 @@ main ul ul {
 .dark-theme body {
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+    .project-card {
+        flex-basis: 100%;
+    }
+    .nav{
+        max-height: none;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+ 
+    }
+}
+
+.email{
+    background-color: #222;
+    border-radius: 10px;
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+
+.email:hover {
+    background-color: #444;
+    color: var(--button-text-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.logo {
+    display: inline-block;
+    color: rgb(194, 194, 194);
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.logo img {
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    position: fixed;
+    background-color: var(--background-color);
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+ 
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked ~ nav {
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
 }

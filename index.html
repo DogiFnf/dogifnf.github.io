@@ -8,35 +8,65 @@
 </head>
 <body>
     <header>
-        <nav>
-            <button id="aboutButton">Обо мне</button>
-            <button id="contactsButton">Связь со мной</button>
-            <button id="themeToggle">Смена темы</button>
+        <a href="#" class="logo">
+            <img src="./DogiFnf.jpg" alt="DogiFnf">
+        </a>
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <nav class="nav">
+            <h2>
+                Тема
+                <div>
+                    <ul class="menu">
+                        <button id="themeToggle">Смена темы</button>
+                    </ul>
+                </div>
+            </h2>
         </nav>
     </header>
-
     <main>
-        <h1>Обо мне!</h1>
-        <p>Привет! Меня зовут DogiFnf, и я только начинаю изучать веб-разработку. Я учусь создавать веб-сайты с использованием HTML, CSS и JavaScript, и я очень рад делиться своими знаниями и проектами с вами.</p>
-        <p>Если у вас есть предложения или вопросы, не стесняйтесь связаться со мной, я всегда открыт.</p>
-        <br>
+        <section>
+            <h1>Обо мне!</h1>
+            <p>Привет! Меня зовут DogiFnf, и я только начинаю изучать веб-разработку. Я учусь создавать веб-сайты с использованием HTML, CSS и JavaScript, и я очень рад делиться своими знаниями и проектами с вами.</p>
+            <p>Если у вас есть предложения или вопросы, не стесняйтесь связаться со мной, я всегда открыт.</p>
+        </section>
         <section>
             <h2>Мои проекты</h2>
             <p>Здесь будут описаны и представлены некоторые из моих проектов. Пожалуйста, ознакомьтесь с ними и дайте мне знать, если у вас есть какие-либо вопросы или предложения.</p>
-            <div class="project-card">
-                <img src="./DogiFnf.jpg" alt="Этот сайт">
-                <div>
-                    <h3>Этот сайт</h3>
-                    <p>В будущем я планирую развивать свой сайт и добавлять сюда больше своих проектов.</p>
+            <dir class="projects">
+                <div class="project-card">
+                    <img src="./DogiFnf.jpg" alt="Этот сайт">
+                    <div>
+                        <h3>Этот сайт</h3>
+                        <p>В будущем я планирую развивать свой сайт и добавлять сюда больше своих проектов.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="./WorkBot.jpg" alt="Игровой бот">
-                <div>
-                    <h3>Work Bot</h3>
-                    <p>Я пишу своего игрового телеграм бота для работы и продолжаю его развивать, добавляя новые функции.</p>
+                <div class="project-card">
+                    <img src="./WorkBot.jpg" alt="Игровой бот">
+                    <div>
+                        <h3>Work Bot</h3>
+                        <p>Я пишу своего игрового телеграм бота для работы и продолжаю его развивать, добавляя новые функции.</p>
+                    </div>
                 </div>
-            </div>
+            </dir>
+        </section>
+        <section>
+            <h1>Способы связи со мной</h1>
+            <p>Если у вас есть предложения, вопросы или вы хотите поделиться своими мыслями, не стесняйтесь связаться со мной. Вот несколько способов, как вы можете это сделать:</p>
+            <ul>
+                <li>Электронная почта: 
+                    <a id="copyButton" data-text="dogifnf@gmail.com" href="mailto:dogifnf@gmail.com" class="email">
+                        dogifnf@gmail.com
+                    </a>
+                </li>
+                <li>Социальные сети:
+                    <ul>
+                        <li><a href="https://t.me/DogiFnf" target="_blank">Telegram</a></li>
+                        <li><a href="https://discord.com/users/835203285862449152" target="_blank">Discord</a></li>
+                    </ul>
+                </li>
+            </ul>
         </section>
     </main>
 

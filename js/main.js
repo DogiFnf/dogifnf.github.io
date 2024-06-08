@@ -1,11 +1,3 @@
-document.getElementById('aboutButton').addEventListener('click', function() {
-    window.location.href = 'index.html';
-});
-
-document.getElementById('contactsButton').addEventListener('click', function() {
-    window.location.href = 'contacts.html';
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggleButton = document.getElementById('themeToggle');
     if (!themeToggleButton) return;
@@ -32,5 +24,4 @@ document.getElementById('copyButton').addEventListener('click', function() {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    alert('Текст скопирован в буфер обмена!');
 });
