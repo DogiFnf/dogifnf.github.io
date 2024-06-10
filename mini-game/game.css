@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+.dark-theme {
+    --background-color: #333;
+    --text-color: #fff;
+}
+
+h1,p,h2 {
+    text-align: center;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 5px;
+}
+
+.description {
+    color: var(--text-color);
+    position: absolute;
+    bottom: 12px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+    width: 415px;
+    height: 415px;
+}
+
+button {
+    background-color: #222;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 45px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.cell {
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.cell-2 { background-color: #faf0de; }
+.cell-4 { background-color: #f0e4d0; }
+.cell-8 { background-color: #ffaa65; }
+.cell-16 { background-color: #ffa860; }
+.cell-32 { background-color: #ff704d; }
+.cell-64 { background-color: #ff5733; }
+.cell-128 { background-color: #ffc048; }
+.cell-256 { background-color: #ffbd48; }
+.cell-512 { background-color: #ffb265; }
+.cell-1024 { background-color: #ff8733; }
+.cell-2048 { background-color: #ff5500; }
+
+.gameboard {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Занимает весь экран по вертикали */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.3);
+    z-index: 1000;
+    height: 100px;
+}
+
+header img {
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+}
+
+header li {
+    list-style: none;
+}
+  
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+  
+header a:hover{
+    font-weight: bolder;
+    text-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+}
+
+.logo img {
+    margin: 5px;
+}
+
+.logo {
+    display: flex;
+    margin: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+  
+.nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+}
+  
+.menu-items li a:hover {
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+    margin: 0px 389px;
+    padding: 7px 50px;
+    margin-bottom: 1.2rem;
+}
+  
+.menu-items button {
+    margin: 0;
+}
+  
+.menu-items h1 {
+    color: #000;
+    margin-bottom: 5px;
+}
+
+header div h1 {
+    bottom: 10px;
+    left: 10px;
+    height: 65px;
+    width: auto;
+}

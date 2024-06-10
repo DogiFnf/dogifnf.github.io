@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js"></script>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">
-            <img src="./DogiFnf.jpg" alt="DogiFnf">
-        </a>
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-
-        <nav class="nav">
-            <h2>
-                Тема
-                <div>
-                    <ul class="menu">
-                        <button id="themeToggle">Смена темы</button>
-                    </ul>
+        <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>  
+                    <div class="logo">
+                        <img src="./DogiFnf.jpg" alt="DogiFnf">
+                        <h1>DogiFnf</h1>
+                    </div>
+                    <div class="menu-items">
+                        <h1>Основное</h1>
+                        <li><a href="./index.html">Главная</a></li>
+                        <h1>Тесты</h1>
+                        <li><a href="./mini-game/game.html">Игра 2048</a></li>
+                        <li><button id="themeToggle">Смена темы</button></li>
+                    </div>
                 </div>
-            </h2>
-        </nav>
+            </div>
+          </nav>
     </header>
     <main>
         <section>
@@ -34,22 +42,26 @@
         <section>
             <h2>Мои проекты</h2>
             <p>Здесь будут описаны и представлены некоторые из моих проектов. Пожалуйста, ознакомьтесь с ними и дайте мне знать, если у вас есть какие-либо вопросы или предложения.</p>
-            <dir class="projects">
+            <div class="projects">
                 <div class="project-card">
-                    <img src="./DogiFnf.jpg" alt="Этот сайт">
-                    <div>
-                        <h3>Этот сайт</h3>
-                        <p>В будущем я планирую развивать свой сайт и добавлять сюда больше своих проектов.</p>
+                    <h3>Этот сайт</h3>
+                    <div class="img-and-text">
+                        <img src="./DogiFnf.jpg" alt="Этот сайт">
+                        <div>
+                            <p>В будущем я планирую развивать свой сайт и добавлять сюда больше своих проектов.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="./WorkBot.jpg" alt="Игровой бот">
-                    <div>
-                        <h3>Work Bot</h3>
-                        <p>Я пишу своего игрового телеграм бота для работы и продолжаю его развивать, добавляя новые функции.</p>
+                    <h3>Work Bot</h3>
+                    <div class="img-and-text">
+                        <img src="./WorkBot.jpg" alt="Игровой бот">
+                        <div>
+                            <p>Я пишу своего игрового телеграм бота для работы и продолжаю его развивать, добавляя новые функции.</p>
+                        </div>
                     </div>
                 </div>
-            </dir>
+            </div>
         </section>
         <section>
             <h1>Способы связи со мной</h1>
@@ -71,6 +83,5 @@
     </main>
 
     <footer>&copy; 2024 DogiFnf. Все права защищены.</footer>
-    <script src="./js/main.js"></script>
 </body>
 </html>
