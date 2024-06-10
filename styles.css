@@ -56,6 +56,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -6px 8px 0 rgb(0 0 0 / 20%);
 }
 
 
@@ -162,6 +163,7 @@ main ul li a:hover {
 }
 
 main ul ul {
+  height: 100px;
   list-style-type: disc;
   padding-left: 20px;
 }
