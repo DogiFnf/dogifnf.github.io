@@ -1,98 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./main.js"></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="navbar">
-                <div class="container nav-container">
-                    <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" />
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>  
-                    <div class="logo">
-                        <img src="./DogiFnf.jpg" alt="DogiFnf">
-                        <h1>DogiFnf</h1>
-                    </div>
-                    <div class="menu-items">
-                        <h1>Основное</h1>
-                        <li><a href="./index.html">Главная</a></li>
-                        <h1>Тесты</h1>
-                        <li><a href="./mini-game/game.html">Игра 2048</a></li>
-                        <li><button id="themeToggle">Смена темы</button></li>
-                    </div>
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="DogiFnf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Сайт-портфолио пользователя DogiFnf">
+        <meta name="keywords" content="dogi, dogifnf, доги, догифнф">
+        <title>Главная</title>
+        <link rel="icon" href="./assets/DogiFnf.jpg">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-bar">
+                <div class="header-img"><img src="./assets/DogiFnf.jpg" alt="DogiFnf"></div>
+                <def class="header-text">DogiFnf</def>
             </div>
-          </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Обо мне!</h1>
-            <p>Привет! Меня зовут DogiFnf, и я только начинаю изучать веб-разработку. Я учусь создавать веб-сайты с использованием HTML, CSS и JavaScript, и я очень рад делиться своими знаниями и проектами с вами.</p>
-            <p>А так же я создаю простые приложения на Python, SQL</p>
-            <p>Если у вас есть предложения или вопросы, не стесняйтесь связаться со мной, я всегда открыт.</p>
-            <br>
-        </section>
-        <section>
-            <h2>Мои проекты</h2>
-            <p>Здесь будут описаны и представлены некоторые из моих проектов. Пожалуйста, ознакомьтесь с ними и дайте мне знать, если у вас есть какие-либо вопросы или предложения.</p>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Этот сайт</h3>
-                    <div class="img-and-text">
-                        <img src="./DogiFnf.jpg" alt="Этот сайт">
-                        <div>
-                            <p>В будущем я планирую развивать свой сайт и добавлять сюда больше своих проектов.</p>
-                        </div>
-                    </div>
+            <div class="line"></div>
+        </header>
+        <main>
+            <!-- Тут был vo0ov -->
+            <section class="section-about">
+                <div class="text">
+                    <h2>Обо мне</h2>
+                    <p>Привет! Меня зовут <strong>DogiFnf</strong>, и я изучаю веб-разработку. Я учусь создавать веб-сайты с использованием <span>HTML</span>, <span>CSS</span> и <span>JavaScript</span>, и я очень рад делиться своими знаниями и проектами с вами.</p>
+                    <br>
+                    <p>А так же я создаю простые приложения на <span>Python</span>, <span>SQL</span></p>
+                    <br>
+                    <p>Если у вас есть предложения или вопросы, не стесняйтесь связаться со мной, я всегда открыт.</p>
                 </div>
-                <div class="project-card">
-                    <h3>Work Bot</h3>
-                    <div class="img-and-text">
-                        <img src="./WorkBot.jpg" alt="Игровой бот">
-                        <div>
-                            <p>Я пишу своего игрового телеграм бота для работы и продолжаю его развивать, добавляя новые функции.</p>
-                        </div>
+                <div class="line"></div>
+            </section>
+            <section class="section-projects">
+                <div class="projects-container">
+                    <div class="projects-header">
+                        <h1>Мои проекты</h1>
+                        <p>Здесь будут описаны и представлены некоторые из моих проектов. Пожалуйста, ознакомьтесь с ними и дайте мне знать, если у вас есть какие-либо вопросы или предложения.</p>
                     </div>
-                </div>
-                <div class="project-card">
-                    <h3>Юзербот</h3>
-                    <div class="img-and-text">
-                        <img src="./DogiFnf.jpg" alt="Юзербот">
-                        <div>
-                            <p>Я создал своего личного телеграм юзербота. У меня нету планов нарушать правила телеграм.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h1>Способы связи со мной</h1>
-            <p>Если у вас есть предложения, вопросы или вы хотите поделиться своими мыслями, не стесняйтесь связаться со мной. Вот несколько способов, как вы можете это сделать:</p>
-            <ul>
-                <li>Электронная почта: 
-                    <a id="copyButton" data-text="dogifnf@gmail.com" href="mailto:dogifnf@gmail.com" class="email">
-                        dogifnf@gmail.com
-                    </a>
-                </li>
-                <li>Социальные сети:
-                    <ul>
-                        <li><a href="https://t.me/DogiFnf" target="_blank">Telegram</a></li>
-                        <li><a href="https://discord.com/users/835203285862449152" target="_blank">Discord</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </main>
 
-    <footer>&copy; 2024 DogiFnf. Все права защищены.</footer>
-</body>
+                    <div class="projects">
+
+                        <!-- Этот сайт -->
+
+                        <div class="project">
+                            <div class="project-card">
+                                <div class="project-img"><img src="./assets/DogiFnf.jpg" alt="Этот сайт"></div>
+                                <div class="project-title">Этот сайт</div>
+                                <div class="project-description">
+                                        В будущем я планирую развивать свой сайт и добавлять сюда больше своих проектов.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- WorkBot -->
+
+                        <div class="project">
+                            <div class="project-card">
+                                <div class="project-img"><img src="./assets/WorkBot.jpg" alt="Игровой бизнес бот"></div>
+                                <div class="project-title">WorkBot</div>
+                                <div class="project-description">
+                                    Я пишу своего игрового телеграм бота для работы и продолжаю его развивать, добавляя новые функции.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Userbot -->
+
+                        <div class="project">
+                            <div class="project-card">
+                                <div class="project-img"><img src="./assets/DogiFnf.jpg" alt="Юзербот"></div>
+                                <div class="project-title">Юзербот</div>
+                                <div class="project-description">
+                                    Я создал своего личного телеграм юзербота. У меня нету планов нарушать правила телеграм.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </section>
+        </main>
+        <footer>
+            <div class="contact">
+                <a href="https://t.me/DogiFnf">
+                    <img src="./assets/SVG/telegram.svg" alt="telegram">
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; COPYRIGHT 2024 DogiFnf.</p>
+                <p>Все права защищены.</p>
+            </div>
+        </footer>
+        <script src="./main.js"></script>
+    </body>
 </html>
