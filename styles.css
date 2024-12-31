@@ -131,7 +131,7 @@ footer img {
 .project {
     position: relative;
     padding-top: 23px;
-
+    padding-bottom: 10px;
 }
 
 .project-card {
@@ -146,6 +146,7 @@ footer img {
     scroll-snap-stop: auto;
     flex-shrink: 0;
     z-index: 4;
+    height: 300px;
 }
 
 .project:hover {
