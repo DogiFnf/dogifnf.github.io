@@ -132,6 +132,7 @@ footer img {
     position: relative;
     padding-top: 23px;
     padding-bottom: 10px;
+    transition: transform 0.5s var(--anim);
 }
 
 .project-card {
@@ -151,7 +152,6 @@ footer img {
 
 .project:hover {
     transform: translateY(-5px);
-    transition: all 0.5s var(--anim);
 }
 
 .project-img {
