@@ -92,7 +92,6 @@ footer img {
 .projects-container {
     width: unset;
     position: relative;
-    touch-action: none;
 }
 
 .projects-header h1,
